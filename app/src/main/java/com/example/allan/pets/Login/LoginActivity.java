@@ -93,6 +93,21 @@ public class LoginActivity extends AppCompatActivity{
 
             }
         });
+        TextView linkSignUp = (TextView) findViewById(R.id.link_signup);
+        linkSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        //If user is logged in, go to Homeactivity
+        if(mAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
     @Override
     public void onStart() {

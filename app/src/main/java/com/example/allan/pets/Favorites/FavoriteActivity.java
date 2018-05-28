@@ -21,7 +21,7 @@ public class FavoriteActivity extends AppCompatActivity{
         setContentView(R.layout.activity_home);
         Log.d(TAG, "onCreate: starting");
 
-        //setupBottomNavigationView();
+        setupBottomNavigationView();
     }
 
     private void setupBottomNavigationView() {

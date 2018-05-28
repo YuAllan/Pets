@@ -37,20 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         setupViewPager();
         //setupTabs();
     }
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
 
-    private void updateUI(FirebaseUser currentUser) {
-        if(currentUser == null) {
-            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-            startActivity(intent);
-        }
-    }
 
     //navigation view setup
     private void setupBottomNavigationView() {
@@ -85,7 +72,20 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_search);
 
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
 
+    private void updateUI(FirebaseUser currentUser) {
+        if(currentUser == null) {
+            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
 
 
 }
