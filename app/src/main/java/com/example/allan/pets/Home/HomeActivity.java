@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         setupBottomNavigationView();
         setupViewPager();
         //setupTabs();
+        //mAuth.signOut();
     }
 
 
