@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.allan.pets.R;
 
+/**
+ * one of view pager, home frag is featured frag?
+ */
 public class Homefragment extends Fragment{
 
     private static final String TAG ="HomeFragment";

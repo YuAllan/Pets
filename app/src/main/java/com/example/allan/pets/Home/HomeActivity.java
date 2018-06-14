@@ -8,9 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TableLayout;
-import android.content.Context;
 
 
 import com.example.allan.pets.Login.LoginActivity;
@@ -37,9 +34,10 @@ public class HomeActivity extends AppCompatActivity {
         setupViewPager();
         //setupTabs();
         //mAuth.signOut();
+
     }
 
-
+    //TODO add search bar on top of home activity.
     //navigation view setup
     private void setupBottomNavigationView() {
 
@@ -53,14 +51,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
-
+    //TODO research viewpager and FragmentPagerAdapter
     private void setupViewPager() {
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         //adapter.addFragment(new Filterfragment());
         //adapter.addFragment(new Logofragment());
         //adapter.addFragment(new Searchfragment());
-        adapter.addFragment(new Homefragment());
+
         adapter.addFragment(new Explorefragment());
+        adapter.addFragment(new Homefragment());
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
 

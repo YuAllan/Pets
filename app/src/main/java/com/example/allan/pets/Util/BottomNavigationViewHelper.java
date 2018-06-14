@@ -19,6 +19,10 @@ public class BottomNavigationViewHelper {
 
     private static final String TAG = "BottomNavigationViewHelp";
 
+    /**
+     *
+     * @param bottomNavigationViewEx a third-party library github.com/ittianyu/BottomNavigationViewEx
+     */
     public static void setupBottomNavigationView(BottomNavigationViewEx bottomNavigationViewEx) {
         Log.d(TAG, "SetupBottomNavigationView: Initliazing Bottom Navigation View");
         bottomNavigationViewEx.enableAnimation(false);
@@ -28,7 +32,9 @@ public class BottomNavigationViewHelper {
     }
 
     public static void enableNavigation(final Context context, BottomNavigationViewEx view) {
-
+        /**
+         * change activities instead of fragment
+         */
         view.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

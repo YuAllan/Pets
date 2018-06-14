@@ -18,7 +18,7 @@ public class SearchBarfragment extends Fragment{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search_bar, container, false);
-
+        //add to top of home activity
         return view;
 
     }

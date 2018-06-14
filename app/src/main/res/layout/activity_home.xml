@@ -40,10 +40,13 @@
     -->
             <!-- Middle -->
         <RelativeLayout
+            android:id="@+id/Layout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/Layout2">
-            <include layout="@layout/layout_center"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <include layout="@layout/layout_center" />
 
         </RelativeLayout>
 
